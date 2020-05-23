@@ -17,7 +17,7 @@ set <- function(y) {
         x <<- y
         i <<- NULL    
 }
-get <- function()X
+get <- function()x
 setinverse <- function(inverse) i <<- inverse
 getinverse <- function() i
 list(set = set,
@@ -38,7 +38,7 @@ cacheSolve <- function(x, ...) {
           return(i)
 }
 data <- x$get()
-i <- solve(data, ...)
+i <- solve(data)
 x$setinverse(i)
 i
 }
